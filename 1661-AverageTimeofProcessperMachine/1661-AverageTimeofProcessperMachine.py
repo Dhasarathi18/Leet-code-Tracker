@@ -1,0 +1,2 @@
+# Last updated: 7/17/2026, 2:54:03 PM
+df = merge_df.assign(processing_time = merge_df['timestamp_x'] - merge_df['timestamp_y']).groupby(['machine_id'], as_index=False)['processing_time'].mean().round(3)
